@@ -69,13 +69,15 @@
                 @endauth
 
                 @guest
-                    <x-jet-nav-link href="{{ route('login') }}" :active="request()->routeIs('login')">
-                        {{ __('Login') }}
-                    </x-jet-nav-link>
+                    <div class="flex space-x-2">
+                        <x-jet-nav-link class="" href="{{ route('login') }}" :active="request()->routeIs('login')">
+                            {{ __('Login') }}
+                        </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('register') }}" :active="request()->routeIs('register')">
-                        {{ __('Register') }}
-                    </x-jet-nav-link>
+                        <x-jet-nav-link class="bg-purple-500 hover:bg-purple-600 text-white" href="{{ route('register') }}" :active="request()->routeIs('register')">
+                            {{ __('Register') }}
+                        </x-jet-nav-link>
+                    </div>
                 @endguest
             </div>
 
