@@ -47,14 +47,14 @@
             <section class="text-gray-600 body-font">
               <div class="container mx-auto">
                   <div class="grid grid-cols-3 gap-4">
-                      @foreach(range(1, 15) as $foo)
+                      @foreach($offers as $offer)
                           <div class="bg-white rounded p-2.5 shadow">
                               <a class="block relative h-48 rounded overflow-hidden">
                                   <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
                               </a>
                               <div class="mt-4">
-                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
-                                  <h2 class="text-gray-900 title-font text-lg font-medium">The Catalyzer</h2>
+                                  <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">{{ $offer->category->name }}</h3>
+                                  <h2 class="text-gray-900 title-font text-lg font-medium">{{ $offer->title }}</h2>
                                   <p class="my-1">$16.00</p>
                                   <button class="px-3.5 py-1.5 text-sm rounded bg-indigo-500 hover:bg-indigo-600 text-white" type="button">Add to cart</button>
                               </div>
