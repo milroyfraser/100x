@@ -11,6 +11,6 @@ class Category extends Model
 
     public function offers()
     {
-        $this->hasMany(Offers::class);
+        $this->hasMany(Offer::class);
     }
 }

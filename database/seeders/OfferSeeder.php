@@ -3,15 +3,15 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
-use App\Models\Offers;
+use App\Models\Offer;
 use Illuminate\Database\Seeder;
 
-class OffersSeeder extends Seeder
+class OfferSeeder extends Seeder
 {
     public function run()
     {
         Category::all()->each(function (Category $category) {
-            Offers::factory(10)->create([
+            Offer::factory(10)->create([
                 'category_id' => $category->id,
             ]);
         });
