@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\Offer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class OffersFactory extends Factory
+class OfferFactory extends Factory
 {
     protected $model = Offer::class;
 
