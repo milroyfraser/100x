@@ -46,11 +46,13 @@
         <div class="flex-1 py-4">
             <section class="text-gray-600 body-font">
               <div class="container mx-auto">
-                  <div class="grid grid-cols-3 gap-4">
+                  <div class="grid grid-cols-3 gap-4 mb-4">
                       @foreach($offers as $offer)
                           <livewire:offer-card :offer="$offer" />
                       @endforeach
                   </div>
+
+                  {{ $offers->links() }}
               </div>
             </section>
         </div>
