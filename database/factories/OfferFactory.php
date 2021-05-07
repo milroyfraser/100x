@@ -13,7 +13,7 @@ class OfferFactory extends Factory
     {
         return [
             'title' => $this->faker->words(2, true),
-            'price' => $this->faker->numberBetween(100 * 100, 100 * 5000),
+            'price' => $this->faker->randomElement(range(100, 5000, 100)) * 100,
             'quantity_in_hand' => $this->faker->numberBetween(0, 50),
             'published_at' => $this->faker->dateTimeBetween('-2 months'),
             'ends_at' => $this->faker->dateTimeBetween('-2 months', '+2 months'),
