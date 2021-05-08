@@ -6,7 +6,7 @@
                 wire:model="category"
                 class="appearance-none block w-full mt-1 px-2 py-1.5 border border-gray-200 rounded shadow-none placeholder-gray-400 focus:outline-none focus:ring-primary focus:border-primary text-sm"
             >
-                <option value="null">All</option>
+                <option value="all">All</option>
                 @foreach($categories as $category)
                     <option value="{{ $category->slug }}">{{ $category->name }}</option>
                 @endforeach

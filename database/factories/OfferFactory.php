@@ -15,7 +15,7 @@ class OfferFactory extends Factory
             'title' => $this->faker->words(2, true),
             'price' => $this->faker->randomElement(range(100, 5000, 100)) * 100,
             'quantity_in_hand' => $this->faker->numberBetween(0, 50),
-            'published_at' => $this->faker->dateTimeBetween('-2 months'),
+            'published_at' => $this->faker->boolean(75) ? $this->faker->dateTimeBetween('-2 months') : null,
             'ends_at' => $this->faker->dateTimeBetween('-2 months', '+2 months'),
         ];
     }

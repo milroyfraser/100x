@@ -13,7 +13,7 @@ class CreateOffersTable extends Migration
             $table->string('title');
             $table->integer('price');
             $table->integer('quantity_in_hand');
-            $table->dateTime('published_at');
+            $table->dateTime('published_at')->nullable();
             $table->dateTime('ends_at');
             $table->timestamps();
 

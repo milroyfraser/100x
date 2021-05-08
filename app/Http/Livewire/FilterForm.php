@@ -39,7 +39,7 @@ class FilterForm extends Component
             'max-price' => $this->maxValue,
         ];
 
-        if ($this->category !== null) {
+        if ($this->category !== 'all') {
             $queryParams['category'] = $this->category;
         }
 
